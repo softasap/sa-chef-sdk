@@ -1,0 +1,16 @@
+---
+# defaults file for sa-chef-knife
+
+  role_dir: "{{ role_path }}"
+  root_dir: "{{ role_path }}"
+
+  option_install_ruby: true
+  option_ruby_install_setsystem: true
+
+# ruby dependency
+  rubies_location: /opt/rubies
+  chruby_version: 0.3.9
+  ruby_install_version: 0.6.0
+  ruby_install_setsystem: true
+  ruby_version: 2.1.9
+

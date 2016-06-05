@@ -1,0 +1,10 @@
+---
+# tasks file for sa-chef-knife
+
+  - include: git/main.yml
+    when: option_install_git
+
+  - include: ruby/main.yml
+    when: option_install_ruby
+
+  - include: tasks_chef_sdk.yml  

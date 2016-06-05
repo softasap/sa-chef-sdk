@@ -1,0 +1,25 @@
+---
+  - include: use/__detect_ruby_path.yml
+
+  - name: CHEF SDK | Check if is installed
+    command: dpkg-query -W chef
+    register: chefsdk_check_deb
+    become: yes
+    failed_when: chefsdk_check_deb.rc > 1
+    changed_when: chefsdk_check_deb.rc == 1
+    tags:
+      -chefsdk
+
+
+  - name: CHEF SDK | download package
+    get_url: url="https://packages.chef.io/stable/{{ ansible_distribution | lower }}/{{ansible_distribution_version}}/chefdk_{{ chef_sdk_version |  default('0.14.25')-1_amd64.deb" dest="/tmp/chefsdk.deb"
+    when: chefsdk_check_deb.rc == 1
+    tags:
+      -chefsdk
+
+  - name: CHEF SDK | install package
+    apt: deb="/tmp/chefsdk.deb"
+    become: true
+    when: chefsdk_check_deb.rc == 1
+    tags:
+      -chefsdk
