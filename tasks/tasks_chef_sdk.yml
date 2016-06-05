@@ -2,7 +2,7 @@
   - include: use/__detect_ruby_path.yml
 
   - name: CHEF SDK | Check if is installed
-    command: dpkg-query -W chef
+    command: dpkg-query -W chefdk
     register: chefsdk_check_deb
     become: yes
     failed_when: chefsdk_check_deb.rc > 1
