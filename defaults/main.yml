@@ -3,6 +3,7 @@
 
   role_dir: "{{ role_path }}"
   root_dir: "{{ role_path }}"
+  deploy_user: "{{ansible_user_id}}"
 
   option_install_ruby: false
   option_ruby_install_setsystem: false
