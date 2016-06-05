@@ -11,7 +11,17 @@
   roles:
      - {
          role: "sa-chef-sdk",
-         chef_client_version: "0.14.25"
+         chef_client_version: "0.14.25",
+         option_install_ruby: false,
+         option_ruby_install_setsystem: false,
+         option_install_git: false,
+
+      # ruby dependency
+         rubies_location: /opt/rubies,
+         chruby_version: 0.3.9,
+         ruby_install_version: 0.6.0,
+         ruby_install_setsystem: true,
+         ruby_version: 2.1.9
        }
 
 

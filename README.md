@@ -34,5 +34,15 @@ Advanced:
   roles:
     - {
         role: "sa-chef-sdk",
-        chef_sdk_version: "0.14.25"
+        chef_sdk_version: "0.14.25",
+        option_install_ruby: true,
+        option_ruby_install_setsystem: true,
+        option_install_git: true,
+
+      # ruby dependency
+        rubies_location: /opt/rubies,
+        chruby_version: 0.3.9,
+        ruby_install_version: 0.6.0,
+        ruby_install_setsystem: true,
+        ruby_version: 2.1.9        
       }

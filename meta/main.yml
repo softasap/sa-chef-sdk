@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: vyacheslav voronenko
-  description: OpsCode chef client install for infrastructure setup with Chef Server
+  description: Installs chefdk for developing chef cookbooks locally
   company: http://www.voronenko.info/
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
@@ -27,7 +27,10 @@ galaxy_info:
   galaxy_tags:
     - chef
     - opscode
-    - chef-client
+    - chefdk
+    - berkshelf
+    - chefspec
+    - foodcritic
     - ubuntu
   #platforms:
   #- name: EL
