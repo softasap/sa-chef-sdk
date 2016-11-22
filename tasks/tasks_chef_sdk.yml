@@ -12,7 +12,7 @@
 
 
   - name: CHEF SDK | download package
-    get_url: validate_certs="false" url="https://packages.chef.io/stable/{{ ansible_distribution | lower }}/{{ansible_distribution_version}}/chefdk_{{ chef_sdk_version |  default('0.14.25')}}-1_amd64.deb" dest="/tmp/chefsdk.deb"
+    get_url: validate_certs="false" url="https://packages.chef.io/stable/{{ ansible_distribution | lower }}/{{ansible_distribution_version}}/chefdk_{{ chef_sdk_version |  default('1.0.3')}}-1_amd64.deb" dest="/tmp/chefsdk.deb"
     when: chefsdk_check_deb.rc == 1
     tags:
       -chefsdk
