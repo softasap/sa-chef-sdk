@@ -3,7 +3,7 @@
 
   - name: Ruby | package dependencies + cache update
     apt: pkg={{ item }} state=present force="yes"  update_cache="yes"
-    with_items: "{{needed_packages}}"
+    with_items: "{{needed_packages | default([])}}"
     become: yes
 
   - include: 'ch_ruby.yml'
@@ -11,4 +11,3 @@
   - include: 'ruby_install.yml'
 
   - include: 'ruby.yml'
-
