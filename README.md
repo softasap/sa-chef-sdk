@@ -22,15 +22,17 @@ Example of usage (all parameters are optional)
 
 Simple
 
+```YAML
   roles:
     - {
         role: "sa-chef-sdk"
       }
-
+```
 
 Advanced:
 
 
+```YAML
   roles:
     - {
         role: "sa-chef-sdk",
@@ -46,7 +48,7 @@ Advanced:
         ruby_install_setsystem: true,
         ruby_version: 2.1.9        
       }
-
+```
 
 
 Copyright and license
