@@ -9,7 +9,7 @@
   option_ruby_install_setsystem: false
   option_install_git: false
 
-  chef_sdk_version: 1.0.3
+  chef_sdk_version: "1.2.20"
 
 # ruby dependency
   rubies_location: /opt/rubies

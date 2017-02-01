@@ -36,7 +36,7 @@ Advanced:
   roles:
     - {
         role: "sa-chef-sdk",
-        chef_sdk_version: "1.0.3",
+        chef_sdk_version: "1.2.20",
         option_install_ruby: true,
         option_ruby_install_setsystem: true,
         option_install_git: true,
@@ -53,8 +53,6 @@ Advanced:
 
 Copyright and license
 ---------------------
-
-Copyright - Vyacheslav Voronenko
 
 Code licensed under the [BSD 3 clause] (https://opensource.org/licenses/BSD-3-Clause) or the [MIT License] (http://opensource.org/licenses/MIT).
 
